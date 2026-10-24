@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      try {
+        var savedTheme = 'system'
+        var rawState = window.localStorage.getItem('roomhisaab.v1')
+        if (rawState) {
+          var parsedState = JSON.parse(rawState)
+          if (parsedState && parsedState.profile && parsedState.profile.theme) savedTheme = parsedState.profile.theme
+        }
+        var useDark = savedTheme === 'dark' || (savedTheme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        document.documentElement.classList.toggle('dark', useDark)
+        document.documentElement.classList.toggle('light', !useDark)
+        document.documentElement.style.colorScheme = useDark ? 'dark' : 'light'
+      } catch (error) {}
+    </script>
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#5046C8" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#090B16" />
+    <meta name="description" content="RoomHisaab — Shared room expenses, made simple. Track purchases, split bills, pay with UPI, and settle balances clearly." />
+    <meta property="og:title" content="RoomHisaab — Shared room expenses, made simple" />
+    <meta property="og:description" content="Track purchases, split bills, pay with UPI, and settle room balances clearly." />
+    <meta property="og:type" content="website" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    </noscript>
+    <title>RoomHisaab — Shared room expenses, made simple</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
