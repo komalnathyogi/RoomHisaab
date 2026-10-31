@@ -1,0 +1,55 @@
+{
+  "name": "roomhisaab",
+  "private": true,
+  "version": "7.2.3-rc.0",
+  "type": "module",
+  "description": "Shared room expenses, clear balances and exact UPI payment links",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "typecheck": "tsc --noEmit",
+    "smoke": "esbuild tests/smoke.ts --bundle --platform=node --format=esm --outfile=node_modules/.cache/smoke.mjs && node node_modules/.cache/smoke.mjs",
+    "contrast": "node tests/contrast.mjs",
+    "check": "npm run typecheck && npm run smoke && npm run contrast && npm run build",
+    "test": "npm run smoke",
+    "test:e2e": "playwright test",
+    "test:a11y": "playwright test -g \"axe WCAG\"",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.109.0",
+    "@zxing/browser": "^0.1.5",
+    "@zxing/library": "^0.21.3",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.11.17",
+    "qrcode.react": "^4.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.18.5",
+    "recharts": "^2.13.3",
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.64.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@types/three": "^0.186.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "autoprefixer": "^10.4.20",
+    "esbuild": "^0.28.2",
+    "eslint": "^10.14.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.13.0",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.72.1",
+    "vite": "^8.3.5"
+  },
+  "overrides": {
+    "minimatch": "^11.0.1"
+  }
+}
