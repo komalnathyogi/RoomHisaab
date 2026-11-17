@@ -1,0 +1,5 @@
+RoomHisaab v7.2.5 Obsidian & Champagne source archive
+Archive: roomhisaab-v7.2.5-obsidian-source.zip
+Included source/document files: 145
+Excluded: .env*, credentials, secrets, Git metadata, dependencies, build output, generated test results, logs, local database/key files and all ZIP archives.
+No live credentials or local environment files are included.

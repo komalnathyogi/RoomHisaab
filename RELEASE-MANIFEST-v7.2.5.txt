@@ -1,0 +1,5 @@
+RoomHisaab v7.2.5 source archive
+Archive: roomhisaab-v7.2.5-source.zip
+Included source/document files: 143
+Excluded: .env*, credentials, secrets, Git metadata, dependencies, build output, generated Playwright results, logs, local database/key files and ZIP archives.
+No live credentials or local environment files are included.

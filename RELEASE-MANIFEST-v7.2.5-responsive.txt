@@ -1,0 +1,5 @@
+RoomHisaab v7.2.5 responsive source package
+Archive: roomhisaab-v7.2.5-responsive-source.zip
+Files before this manifest: 147
+Excludes .env files, secrets, credentials, Git metadata, dependencies, build products, generated test results, database/key files and all ZIPs.
+No live credentials/local environment files are included.

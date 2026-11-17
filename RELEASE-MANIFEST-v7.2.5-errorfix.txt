@@ -1,0 +1,4 @@
+RoomHisaab v7.2.5 error-fix source archive
+Archive: roomhisaab-v7.2.5-errorfix-source.zip
+Files before manifest: 148
+Excludes environment secrets, credentials, Git metadata, dependencies, build output, generated test artifacts, logs, local databases/keys and ZIP archives.
